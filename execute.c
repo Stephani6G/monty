@@ -3,12 +3,13 @@
 
 /**
 * execute - function that executes the opcode
-* 
 * @stack: head stack linked list
 * @counter: line count
 *
 * @file: pointer to monty file stream
 * @content: line content
+* Return: line content
+*
 */
 
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
@@ -38,7 +39,6 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	if (op && op[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
@@ -47,7 +47,6 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		}
 		i++;
 	}
-
 	if (op && opst[i].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
