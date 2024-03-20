@@ -44,7 +44,7 @@ void f_add(stack_t **head, unsigned int counter)
 *
 * @counter: line count(lc)
 *
-* Return: nothing void 
+* Return: nothing void
 */
 
 void f_sub(stack_t **head, unsigned int counter)
@@ -73,7 +73,7 @@ void f_sub(stack_t **head, unsigned int counter)
 /**
 * f_mul - function that multiplies the
 * top two elements of the stack
-
+*
 * @head: double head pointer to the stack
 *
 * @counter: line count
@@ -150,7 +150,7 @@ void f_div(stack_t **head, unsigned int counter)
 }
 
 /**
-* f_mod - function that computes the remainder of 
+* f_mod - function that computes the remainder of
 * the division of the second top element of
 * the stack by the top element of the stack
 *
